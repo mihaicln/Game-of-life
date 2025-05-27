@@ -1,3 +1,68 @@
+# Project overview
+This project is primarily implemented in C, providing a classic and efficient way to explore the Game of Life. It includes the core logic for simulating cellular evolution, along with utilities for checking code quality and performance.
+
+## Game of life features
+The implementation likely includes:
+
+##Grid Representation: Utilizes a 2D array to represent the game board, where each cell can be either alive or dead.
+
+##Game Rules: Adheres to Conway's original rules for cell evolution:
+Any live cell with fewer than two live neighbours dies (underpopulation).
+Any live cell with two or three live neighbours lives on to the next generation.
+Any live cell with more than three live neighbours dies (overpopulation).
+Any dead cell with exactly three live neighbours becomes a live cell (reproduction).
+Generation Updates: Logic to calculate the state of the next generation based on the current one, often using techniques like "double buffering" for smooth transitions.
+Neighbor Counting: A mechanism to accurately count live neighbors for each cell, including handling edge cases, potentially with a "torus" mode where the grid wraps around.
+Input/Output: Methods for defining initial cell configurations (universes) and displaying the evolving generations, possibly through the console or file output.
+
+## Code implementation:
+there are 4 task but only 3 implemented. 
+
+Task1: take a matrix input from a file and modifies the given input as stated in the game rules
+
+Task2: take a matrix input from a file and stores the modifies cells from the original matrix into stacks and output them into another file
+
+Task3: 
+
+Task4: is not implemented due to complexity
+
+## Code structure:
+mainfirst.c contains the main function in which for every task there is the implementation. Also for every input, the reading is made here.
+functiiStack.c contains the functions used to implement task1 and task2
+treeFunctions.c contains the functions used to implement task3
+bibTask4.c contains the functions for a posible implementation of task4
+the header files contains the declarations of the functions and the definied structures needed.
+
+## Makefile
+
+This project consists of multiple C source files and uses a Makefile to automate the compilation process.
+
+## 📁 File Structure
+
+- `mainfirst.c` – The main entry point of the program
+- `functiiStack.c` / `functiiStack.h` – Functions for stack operations 
+- `treeFunctions.c` / `treeFunctions.h` – Functions for tree operations
+- `Makefile` – The build automation script
+
+## ⚙️ How to Use the Makefile
+
+### 1. Compile the Project
+
+To compile the project, run the following command in your terminal:
+
+```bash
+make
+```
+to clean the executable file in your terminal:
+```bash
+make clean
+```
+For a posible implementation of task4 include in the make file at SRC another source file and a header
+
+The input files are stored in the input folder. It is not necessary to run them separately the checker does it automatically when make file is run.
+
+
+
 # PA CHECKER
 
 ## License
